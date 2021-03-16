@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39DE7485-F1D2-4D2A-950C-FEF0370C4A00}</ProjectGuid>
+    <ProjectGuid>{9BE1A83E-710A-40AE-A47E-F58C976CFB6F}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aula4_Ficha</RootNamespace>
-    <AssemblyName>Aula4 Ficha</AssemblyName>
+    <RootNamespace>Aula7_Classes</RootNamespace>
+    <AssemblyName>Aula7-Classes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,12 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auditorio.cs" />
+    <Compile Include="ContaBancaria.cs" />
+    <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

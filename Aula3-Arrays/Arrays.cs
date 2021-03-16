@@ -1,4 +1,6 @@
 ﻿/*
+ * lufer
+ * LP2 - LESI
  * Metodos para manipular arrays
  * Parâmetros ref e out
  * */
@@ -7,6 +9,9 @@ using System;
 
 namespace Aula3_Arrays
 {
+    /// <summary>
+    /// Classe para Manipular Arrays
+    /// </summary>
     class Arrays
     {
         /// <summary>

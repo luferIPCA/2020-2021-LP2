@@ -24,6 +24,10 @@ namespace Aula_Arrays_05032021
 
         #region Methods
 
+        /// <summary>
+        /// Apresenta o conteúdo de um array
+        /// </summary>
+        /// <param name="nomes"></param>
         public static void MostraArray(string[,] nomes)
         {
             for (int i = 0; i < nomes.GetLength(0); i++)       //GetLength(0) indica o tamanho da dimensão 1 == numero de linhas
@@ -36,8 +40,8 @@ namespace Aula_Arrays_05032021
         /// <summary>
         /// O que faz este método? 
         /// </summary>
-        /// <param name="arr"></param>
-        static void transpose(int[,] arr)
+        /// <param name="arr">Array bidimensional a tratar</param>
+        static void Transpose(int[,] arr)
         {
             int temp;
             for (int i = 0; i < arr.GetLength(0); i++)

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{39DE7485-F1D2-4D2A-950C-FEF0370C4A00}</ProjectGuid>
+    <ProjectGuid>{57E68302-F8CB-4CD4-BEAA-23878B70CF2D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aula4_Ficha</RootNamespace>
-    <AssemblyName>Aula4 Ficha</AssemblyName>
+    <RootNamespace>Extra</RootNamespace>
+    <AssemblyName>Extra</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,7 +43,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Auditorio.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

@@ -15,7 +15,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Aula_Arrays_05032021.Program">
-    <Position X="12.25" Y="0.5" Width="1.5" />
+    <Position X="9.25" Y="0.5" Width="1.5" />
     <Compartments>
       <Compartment Name="Nested Types" Collapsed="false" />
     </Compartments>
@@ -32,9 +32,9 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Aula_Arrays_05032021.Frontend">
-    <Position X="3.75" Y="3.5" Width="1.5" />
+    <Position X="3.5" Y="2.75" Width="2.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAADAAAEAAAAIAAAAAAAgAAAIAAAAAAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>

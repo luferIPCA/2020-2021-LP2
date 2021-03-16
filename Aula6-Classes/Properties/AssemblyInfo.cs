@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Aula4 Ficha")]
+[assembly: AssemblyTitle("Aula6-Classes")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("Aula4 Ficha")]
+[assembly: AssemblyProduct("Aula6-Classes")]
 [assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("39de7485-f1d2-4d2a-950c-fef0370c4a00")]
+[assembly: Guid("f4454a9d-33e7-4990-a236-5f01dd11a0d7")]
 
 // Version information for an assembly consists of the following four values:
 //
