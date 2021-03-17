@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Classes.ContaBancariaI">
+    <Position X="3.25" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAAAAAAAgCAAAQAAAIAAAACAAA=</HashCode>
+      <FileName>Model\ContaBancaria.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Classes.Pessoa">
+    <Position X="0.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AQAAEAAAABAAAACAAAAAAAAAEAAAAQAABgAAAAEAAAA=</HashCode>
+      <FileName>Pessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Classes.Program">
+    <Position X="9.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Banco.Model.ContaBancariaII">
+    <Position X="5.5" Y="0.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAQAAAAAAAAAAgCAAAAAAAIAAAACgAA=</HashCode>
+      <FileName>Model\ContaBancariaII.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

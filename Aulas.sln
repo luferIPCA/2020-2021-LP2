@@ -11,7 +11,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula3-Arrays-04032021", "Au
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula4-Arrays-05032021", "Aula4-Arrays-05032021\Aula4-Arrays-05032021.csproj", "{68E121B5-0DEB-409D-955C-A377A2164071}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula5-ResolucaoExercicio", "Aula5-ResolucaoExercicio\Aula5-ResolucaoExercicio.csproj", "{39DE7485-F1D2-4D2A-950C-FEF0370C4A00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula5-ResolucaoExercicio-Auditorio", "Aula5-ResolucaoExercicio\Aula5-ResolucaoExercicio-Auditorio.csproj", "{39DE7485-F1D2-4D2A-950C-FEF0370C4A00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula6-Classes", "Aula6-Classes\Aula6-Classes.csproj", "{F4454A9D-33E7-4990-A236-5F01DD11A0D7}"
 EndProject
@@ -19,7 +19,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Extra", "Extra\Extra.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula7-Classes", "Aula7-Classes\Aula7-Classes.csproj", "{9BE1A83E-710A-40AE-A47E-F58C976CFB6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula5-ResolucaoExercicio II", "Aula5-ResolucaoExercicio II\Aula5-ResolucaoExercicio II.csproj", "{5910768B-A28D-4282-8C20-283794243B47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula5-ResolucaoExercicio-Auditorio-II", "Aula5-ResolucaoExercicio II\Aula5-ResolucaoExercicio-Auditorio-II.csproj", "{5910768B-A28D-4282-8C20-283794243B47}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

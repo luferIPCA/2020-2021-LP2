@@ -1,137 +1,159 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿/*
+*	<copyright file="Hoje.cs" company="IPCA">
+*		Copyright (c) 2021 All Rights Reserved
+*	</copyright>
+* 	<author>lufer</author>
+*   <date>3/16/2021 6:49:14 PM</date>
+*	<description></description>
+**/
+using System;
 
-namespace Aula7_Classes
+namespace Classes
 {
+
     /// <summary>
-    /// Classe para descrever uma pessoa
+    /// Purpose:
+    /// Created by: lufer
+    /// Created on: 3/16/2021 6:49:14 PM
     /// </summary>
-    class Pessoa
+    /// <remarks></remarks>
+    /// <example></example>
+    public class Pessoa
     {
+        #region Attributes
 
-        #region Atributos
+        static int totObjects = 0;      //atributo de classe
 
-        static int totPessoas=0;      //atributo de classe        
+        private string nome;
+        private int idade;
 
-        string nome;                //atributtos de instancias
-        int idade;
         #endregion
 
-        #region Comportamento
+        #region Methods
+
+        #region Constructors
 
         /// <summary>
-        /// 
+        /// Construtor de Classe
         /// </summary>
         static Pessoa()
         {
-            totPessoas = 0;
+            totObjects = 0;
         }
 
-        #region Construtores
         /// <summary>
-        /// Const por omissão!
+        /// The default Constructor.
         /// </summary>
         public Pessoa()
         {
             nome = "";
             idade = -1;
-
-            totPessoas++;
-            //
+            totObjects++;
         }
 
-        /// <summary>
-        /// 
-        /// </summary>
-        /// <param name="n">Nome da Pessoa</param>
-        /// <param name="i">Idade da Pessoa</param>
+        public Pessoa(string n)
+        {
+            nome = n;
+            idade = -1;
+            totObjects++;
+        }
+
         public Pessoa(string n, int i)
         {
             nome = n;
             idade = i;
-            totPessoas++;
+            totObjects++;
         }
 
         /// <summary>
-        /// 
+        /// COnstroi Pessoa
         /// </summary>
-        /// <param name="idade"></param>
-        /// <param name="nome"></param>
+        /// <param name="idade">Idade da Pessoa</param>
+        /// <param name="nome">Nome da Pessoa</param>
         public Pessoa(int idade, string nome)
         {
-            this.nome = nome;
             this.idade = idade;
-            totPessoas++;
-        }
-
-        public int TotalPessoas
-        {
-            get { return totPessoas; }
-        }
-
-        public static int TotPessoas
-        {
-            get { return totPessoas; }
+            this.nome = nome;
         }
 
         #endregion
 
+        #region Properties
 
-        #region Propriedades
-
-        #region H1 - A la JAVA
         /// <summary>
-        /// 
+        /// Propriedade de classe
         /// </summary>
-        /// <returns></returns>
+        public static int TotalPessoas
+        {
+            get { return totObjects; }
+        }
+
+        /// <summary>
+        /// Propriedade de instância
+        /// </summary>
+        public int TotPessoas
+        {
+            get => totObjects;
+        }
+
+        //H1 - A la JAVA
         public string GetNome()
         {
-            return nome;
+            return nome.ToUpper();
         }
-        public void SetNome(string n)
+
+        public void SetNome(string nome)
         {
-            nome = n;
+            this.nome = nome;
         }
-        #endregion
+
+        //public string Nome
+        //{
+        //    get;set;
+        //}
 
         //H2
-
         public string Nome
         {
-            get { return nome.ToLower(); }
-            set { if (value.Length>0) nome = value.Trim(); }
+            get { return nome.Trim().ToLower(); }
+            set { if (value.Length > 0) nome = value; }
         }
 
+        //lambda expressions
         public int Idade
         {
-            get { return idade; }
-            set { if (idade>0) idade = value; }
+            get => idade;
+            set => idade = value;
         }
 
         #endregion
 
+        #region Overrides
+        #endregion
 
-        #region Destrutor
+        #region OtherMethods
+        #endregion
+
+        #region Destructor
+        /// <summary>
+        /// The destructor.
+        /// </summary>
         ~Pessoa()
         {
-            //ultimas operações antes do objeto ser elimindo da memória...
+            totObjects--;
         }
         #endregion
 
         #endregion
-
     }
 
     /*
-    class Banco
-        numero de conta
-        saldo
-
-        Levanta
-        Deposita
-    */
-
+     * Conta Bancaria
+     *  numConta
+     *  Saldo
+     *  
+     *  Depositar
+     *  Levantar
+     *  Saldo?
+     * */
 }

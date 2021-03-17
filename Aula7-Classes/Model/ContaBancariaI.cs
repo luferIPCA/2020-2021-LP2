@@ -6,12 +6,12 @@
  *
  */
 
-namespace Aula7_Classes
+namespace Classes
 {
     /// <summary>
     /// Classe que descreve uma conta bancária
     /// </summary>
-    class ContaBancaria
+    class ContaBancariaI
     {
         #region Attributes
 
@@ -27,7 +27,7 @@ namespace Aula7_Classes
         /// </summary>
         /// <param name="numConta">Número de conta bancária</param>
         /// <param name="saldo">Saldo bancário</param>
-        public ContaBancaria(int numConta, double saldo)
+        public ContaBancariaI(int numConta, double saldo)
         {
             this.numConta = numConta;
             this.saldo = saldo;
@@ -58,7 +58,7 @@ namespace Aula7_Classes
             }
             set
             {
-                this.saldo = value;
+                if (value>0) this.saldo = value;
             }
         }
 
