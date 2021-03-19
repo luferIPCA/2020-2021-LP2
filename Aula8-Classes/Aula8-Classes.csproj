@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{9BE1A83E-710A-40AE-A47E-F58C976CFB6F}</ProjectGuid>
+    <ProjectGuid>{9E9E932E-DC84-49FD-855A-2C7DCA0B11EE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Aula7_Classes</RootNamespace>
-    <AssemblyName>Aula7-Classes</AssemblyName>
+    <RootNamespace>Aula8_Classes</RootNamespace>
+    <AssemblyName>Aula8-Classes</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model\ContaBancariaI.cs" />
-    <Compile Include="Model\ContaBancariaII.cs" />
+    <Compile Include="Conta.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="DiagramaClasses.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
