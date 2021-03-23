@@ -18,6 +18,9 @@ namespace Aula8_Classes
             #region Pessoas
             Pessoa p1 = new Pessoa();
             p1.Nome = "Ola";
+            p1[0] = "Formação 1";
+            Console.WriteLine("Entrada CV: " + p1[0]);
+
             Pessoa p2 = new Pessoa();
             p2.Nome = "Ole";
             Console.WriteLine(p1.ToString());

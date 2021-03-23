@@ -25,10 +25,11 @@ namespace Aula8_Classes
     public class Pessoa
     {
         #region Attributes
-
+        const int N = 20;
         private string nome;
         private int idade;
-     
+        private string[] cv;
+        private int toCv;
         #endregion
 
         #region Methods
@@ -40,8 +41,19 @@ namespace Aula8_Classes
         /// </summary>
         public Pessoa()
         {
+            cv = new string[N];
+            toCv = 0;
         }
 
+        #endregion
+
+        #region Indexadores
+
+        public string this[int i]
+        {
+            get {  return cv[i];}
+            set { toCv++; cv[i] = value; }
+        }
         #endregion
 
         #region Properties
@@ -134,6 +146,8 @@ namespace Aula8_Classes
         }
 
         #endregion
+
+       
 
         #region METODOSCLASSE
         /// <summary>

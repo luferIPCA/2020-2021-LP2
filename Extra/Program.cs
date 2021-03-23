@@ -40,7 +40,7 @@ namespace Extra
             Pessoa p;
             p.nome = "André";
             Console.WriteLine($"A variavel @for tem o valor {@for} e pessoa chama-se {p.nome}");
-            Console.ReadKey();
+            Console.ReadKey();          
 
 
         }
