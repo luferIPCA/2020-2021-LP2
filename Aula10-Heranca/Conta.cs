@@ -44,7 +44,7 @@ namespace Heranca
     /// Levantamento de Conta Poupança (CP) custa 10 centimos;
     /// </remarks>
     /// <example></example>
-    public class Conta
+    public class Conta : QuaseConta, IConta 
     {
         #region Attributes
 
@@ -56,6 +56,12 @@ namespace Heranca
         #endregion
 
         #region Methods
+
+        public override double Consulta(DateTime dia)
+        {
+            //throw new NotImplementedException();
+            return saldo;
+        }
 
         #region Constructors
 
@@ -93,6 +99,11 @@ namespace Heranca
             else
                 saldo -= (valor + 0.1);
             return valor;
+        }
+
+        public string Extrato()
+        {
+            return ("");
         }
 
         #endregion
@@ -393,4 +404,14 @@ namespace Heranca
         }
     }
     #endregion
+
+
+    public abstract class QuaseConta
+    {
+        public abstract double Consulta(DateTime dia);
+        public double JuroAnual (double saldo, double perc)
+        {
+            return saldo * perc;
+        }
+    }
 }

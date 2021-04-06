@@ -19,6 +19,7 @@ namespace Heranca
             c1.titular.nome = "ola";
             //c1.tipo = TIPOCONTA.CC;
             c1.saldo = 1000;
+            
 
             c1.Deposito(300);
             c1.Levantamento(150);

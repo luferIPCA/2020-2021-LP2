@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24C76B4A-DE5A-40DF-9F3C-B95E00F68B98}</ProjectGuid>
+    <ProjectGuid>{EC9C87EB-F361-403A-B081-90E8658F2BFE}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Heranca</RootNamespace>
-    <AssemblyName>Heranca</AssemblyName>
+    <RootNamespace>GereBanco</RootNamespace>
+    <AssemblyName>GereBanco</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,15 +43,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conta.cs" />
-    <Compile Include="IConta.cs" />
+    <Compile Include="ContaBancaria.cs" />
+    <Compile Include="ContaPoupanca.cs" />
+    <Compile Include="DadosContaBancaria.cs" />
+    <Compile Include="IContaBancaria.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

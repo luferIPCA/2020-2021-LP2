@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{24C76B4A-DE5A-40DF-9F3C-B95E00F68B98}</ProjectGuid>
+    <ProjectGuid>{DD98CF6B-8EE8-4168-ABC6-A8D5F28275EF}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Heranca</RootNamespace>
-    <AssemblyName>Heranca</AssemblyName>
+    <RootNamespace>Hoje</RootNamespace>
+    <AssemblyName>Hoje</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -43,10 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Conta.cs" />
-    <Compile Include="IConta.cs" />
+    <Compile Include="IX.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Varios.cs" />
+    <Compile Include="Z.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

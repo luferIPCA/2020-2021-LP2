@@ -44,11 +44,16 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Heranca.Conta">
-    <Position X="6.5" Y="3.75" Width="1.5" />
+    <Position X="7" Y="2.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABCAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
+      <HashCode>AAAABCAAgAAAAAAEAACAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
       <FileName>Conta.cs</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="titular" />
+      <Field Name="tipo" />
+    </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
   <Struct Name="Cliente">
     <Position X="8.25" Y="0.5" Width="1.5" />
@@ -58,7 +63,7 @@
     </TypeIdentifier>
   </Struct>
   <Enum Name="TIPOCONTA">
-    <Position X="8.25" Y="2" Width="1.5" />
+    <Position X="10" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAABAAAAQAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Conta.cs</FileName>

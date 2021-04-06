@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="Hoje_26_03.Conta">
+  <Class Name="Heranca.Conta">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAABCAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
+      <HashCode>AAAABCAAgAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
       <FileName>Conta.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Field Name="titular" />
       <Field Name="tipo" />
     </ShowAsAssociation>
+    <Lollipop Position="0.2" />
   </Class>
-  <Class Name="Hoje_26_03.ContaCorrente">
+  <Class Name="Heranca.ContaCorrente">
     <Position X="2.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
@@ -21,7 +22,7 @@
       <Field Name="titular" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Hoje_26_03.ContaPoupanca">
+  <Class Name="Heranca.ContaPoupanca">
     <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
@@ -31,7 +32,7 @@
       <Field Name="titular" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Hoje_26_03.ContaBancaria">
+  <Class Name="Heranca.ContaBancaria">
     <Position X="7" Y="0.5" Width="1.5" />
     <AssociationLine Name="titular" Type="Cliente" FixedFromPoint="true" FixedToPoint="true">
       <Path>
@@ -48,21 +49,21 @@
       <Field Name="titular" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="Hoje_26_03.ContaBancariaPoupanca">
+  <Class Name="Heranca.ContaBancariaPoupanca">
     <Position X="9.25" Y="3.25" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Conta.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hoje_26_03.X">
+  <Class Name="Heranca.X">
     <Position X="10.5" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
       <FileName>Conta.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="Hoje_26_03.Program" Collapsed="true">
+  <Class Name="Heranca.Program" Collapsed="true">
     <Position X="10.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
