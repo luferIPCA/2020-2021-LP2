@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Hoje_26_03.Conta">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABCAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="titular" />
+      <Field Name="tipo" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hoje_26_03.ContaCorrente">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="titular" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hoje_26_03.ContaPoupanca">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAGAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="titular" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hoje_26_03.ContaBancaria">
+    <Position X="7" Y="0.5" Width="1.5" />
+    <AssociationLine Name="titular" Type="Cliente" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="7.75" Y="3.661" />
+        <Point X="7.75" Y="4.562" />
+        <Point X="4.25" Y="4.562" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>IAAAACAAAAAAAAAEAAAAABAAAAAAAAAEAAQAAAAGAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="titular" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Hoje_26_03.ContaBancariaPoupanca">
+    <Position X="9.25" Y="3.25" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hoje_26_03.X">
+    <Position X="10.5" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Hoje_26_03.Program" Collapsed="true">
+    <Position X="10.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="Cliente">
+    <Position X="2.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Enum Name="TIPOCONTA">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAQAAAAAACAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Conta.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

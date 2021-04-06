@@ -46,6 +46,7 @@ namespace BancoDLL
             {
                 return this.numConta;
             }
+            private set { numConta = value; }
         }
 
         /// <summary>
