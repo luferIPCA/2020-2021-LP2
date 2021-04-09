@@ -7,9 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula1", "Aula1\Aula1.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula2", "Aula2\Aula2.csproj", "{798E2CCA-9B9E-4894-91BE-6EEA1FA4EC84}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula3-Arrays-04032021", "Aula3-Arrays\Aula3-Arrays-04032021.csproj", "{F6257105-5AF1-4F7C-AC40-72A4C5EF6B50}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula3-Arrays", "Aula3-Arrays\Aula3-Arrays.csproj", "{F6257105-5AF1-4F7C-AC40-72A4C5EF6B50}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula4-Arrays-05032021", "Aula4-Arrays-05032021\Aula4-Arrays-05032021.csproj", "{68E121B5-0DEB-409D-955C-A377A2164071}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula4-Arrays", "Aula4-Arrays-05032021\Aula4-Arrays.csproj", "{68E121B5-0DEB-409D-955C-A377A2164071}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula5-ResolucaoExercicio-Auditorio", "Aula5-ResolucaoExercicio\Aula5-ResolucaoExercicio-Auditorio.csproj", "{39DE7485-F1D2-4D2A-950C-FEF0370C4A00}"
 EndProject
@@ -36,6 +36,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula11-Exemplo-GereBanco", "Aula11-Exemplo-GereBanco\Aula11-Exemplo-GereBanco.csproj", "{EC9C87EB-F361-403A-B081-90E8658F2BFE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula11-Heranca-Interfaces", "Aula11-Heranca-Interfaces\Aula11-Heranca-Interfaces.csproj", "{DD98CF6B-8EE8-4168-ABC6-A8D5F28275EF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula12-HerancaDLL", "Aula12-HerancaDLL\Aula12-HerancaDLL.csproj", "{6041A5F3-4A73-4490-A29A-C850BD74AA56}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula12-UsaHerancaDLL", "Aula12-UsaHerancaDLL\Aula12-UsaHerancaDLL.csproj", "{0EC78FE2-3D28-4DAF-8F3F-3D6CA7795FD8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +115,14 @@ Global
 		{DD98CF6B-8EE8-4168-ABC6-A8D5F28275EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD98CF6B-8EE8-4168-ABC6-A8D5F28275EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD98CF6B-8EE8-4168-ABC6-A8D5F28275EF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6041A5F3-4A73-4490-A29A-C850BD74AA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6041A5F3-4A73-4490-A29A-C850BD74AA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6041A5F3-4A73-4490-A29A-C850BD74AA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6041A5F3-4A73-4490-A29A-C850BD74AA56}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EC78FE2-3D28-4DAF-8F3F-3D6CA7795FD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EC78FE2-3D28-4DAF-8F3F-3D6CA7795FD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EC78FE2-3D28-4DAF-8F3F-3D6CA7795FD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EC78FE2-3D28-4DAF-8F3F-3D6CA7795FD8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
