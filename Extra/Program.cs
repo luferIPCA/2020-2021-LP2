@@ -1,6 +1,6 @@
 ﻿/*
  * Algum conjunto de "outras coisas" que podem interessar: C# >=6
- * Analisar com calma
+ * - Analisar com calma - 
  * 
  * operador @
  * 
@@ -8,14 +8,18 @@
  * 
  * Operador => 
  *      Expression body definition
- *      Lambda Functions (mais tarde)
+ *      Lambda Functions
  * 
  * ! (null-forgiving) operator
  * 
  * ?? and ??= operators
  * 
+ * Nullable value types T? = T +  null
  * 
- * Consultar: https://www.w3schools.com/cs/default.asp
+ * Documentação de código
+ * 
+ * https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/language-specification/documentation-comments
+ * 
  * */
 using System;
 
@@ -53,34 +57,5 @@ namespace Extra
         //}
     }
 
-    class Person
-    {
-        string nome;
-        int idade;
-
-        public string Nome
-        {
-            get { return $"{nome}".Trim(); }
-            set { if (value.Length > 0) nome = value; }
-        }
-
-        //public int Idade
-        //{
-        //    get ;
-        //    set ;
-        //}
-
-        public int Idade
-        {
-            get => idade;
-            set => idade = value;
-        }
-
-        public Person(string n) => nome = n;
-        public Person(int i) => idade = i;
-        public Person(string n, int i)
-        {
-            nome = n; idade = i;
-        }
-    }
+    
 }
