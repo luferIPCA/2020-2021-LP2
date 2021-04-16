@@ -3,7 +3,7 @@
  * Array
  * ArrayList
  * Etc.
- * Ordenar Collections
+ * Ordenar MyCollections
  *  1º Criar Classe X:IComparer
  *  2º Criar método Compare com return (1,-1 ou 0)
  *  3º Usar: arrayList.Sort(new X()) ou
@@ -14,22 +14,14 @@
  * http://www.tutorialsteacher.com/csharp/csharp-queue
  * */
 using System;
-using System.Collections;
 
-namespace Collections
+using System.Collections;
+using System.Collections.Generic;
+
+namespace MyCollections
 {
 
-    /// <summary>
-    /// Struct auxiliar
-    /// </summary>
-    public struct Pessoa
-    {
-        public int idade;
-        public string nome;
-    }
-
-
-    /// <summary>
+     /// <summary>
     /// Demonstrar ArrayList
     /// </summary>
     class Program
@@ -37,29 +29,30 @@ namespace Collections
         static void Main(string[] args)
         {
             #region Fundamentos
-            Pessoa p1;
+
+            Pessoa p1 = new Pessoa();
             p1.nome = "ola1";
             p1.idade = 10;
 
-            Pessoa p2;
+            Pessoa p2 = new Pessoa();
             p2.nome = "ola2";
             p2.idade = 11;
 
-            Pessoa p3;
+            Pessoa p3 = new Pessoa();
             p3.nome = "ola3";
             p3.idade = 10;
 
             Pessoa[] novo = new Pessoa[20];
             novo[0] = p1;
-            //novo[0] = "ola";      //é possível?
+            //novo[0] = "ola";          //é possível?
+            //novo[21] = new Pessoa();  //Erro?
+            Console.Write("Nome:" + novo[0].nome);
 
-            
             #endregion
 
             #region ArrayList
 
             ArrayList aux = new ArrayList();
-
             string[] nomes = new string[] { "ola", "ole" };
             aux.Add("luis");
             aux.Add("luis");
@@ -71,7 +64,7 @@ namespace Collections
             aux.Add(p1);
 
             Console.WriteLine("Size= " + aux.Count);
-            aux.Remove("luis");
+            aux.Remove(p1);
             Console.WriteLine("Index: " + aux.IndexOf(p1).ToString());
             Console.WriteLine("Existe Benfica: " + aux.Contains("benfica"));
 
@@ -204,17 +197,24 @@ namespace Collections
 
             Console.WriteLine("Antes de Ordenar");
             Show(n);
-            n.Sort();                    //comparar do mesmo tipo...OK!
-
+            //n.Sort();                    //comparar do mesmo tipo...OK!
 
             Console.ReadKey();
-            n.Sort();                // Porque falha? 
-            //n.Sort(new MyComparer(SortDirecc.Asc));
+            //n.Sort();                // Porque falha? 
+            n.Sort(new MyComparer(SortDirecc.Asc));
 
             Console.WriteLine("Depois de Ordenar");
             Show(n);
 
-            Console.ReadKey();
+            //REVER
+            aux.Clear();
+            aux.Add(new Carro("12"));
+            aux.Add(new Carro("10"));
+            aux.Add(new Carro("14"));
+            aux.Add(new Carro("18"));
+            aux.Sort();
+
+             Console.ReadKey();
             //#endregion
 
             #endregion
@@ -226,13 +226,14 @@ namespace Collections
 
 
             //m.MyArr.Add("ola");
-            m.MyArr.Add(p1);
+            m.MyArr.Add(p1);        //Cuidado...myArr não deve ser publico
             m.MyArr.Add(p2);
-            m.MyArr.Add(p1);                            //A Capacidade (capacity) duplica sempre que se esgota a reservada inicialmente
+            m.MyArr.Add(p1);        //A Capacidade (capacity) duplica sempre que se esgota a reservada inicialmente
+            m.Insert(p1);           //correct!!!
 
-            //m.MyArr.Sort(
 
-            m.MyArr.Insert(0, p3);                      //Insere na posição 0...shift rigth das existentes
+
+            m.MyArr.Insert(0, p3);  //Insere na posição 0...shift rigth das existentes
             m.MyArr.Remove(p1);
             m.MyArr.Add(p1);
             //m.MyArr.Remove(p1);
@@ -258,13 +259,16 @@ namespace Collections
 
             Hashtable ht = new Hashtable();
             //inicializar
-            //Hashtable ht = new Hashtable() { { 1, 2 }, { 2, "ok" } };
+            //Hashtable ht = new Hashtable() { { 1, 2 }, { 2, "ok" }, { "3", new Carro("12") } };
 
             //Adding item into HashTable  
             ht.Add(1, "Benfica");
+            ht.Add(7, "Benfica");
+            //ht.Add(1, "Porto");           //Erro: Porquê?
             ht.Add(12, "Porto");
             ht.Add(8, "Braga");
             ht.Add(4, "Outro");
+            //
             Console.WriteLine("Count : {0}", ht.Count);
             if (ht.ContainsValue("Benfica"))
                 Console.WriteLine("Benfica existe na HashTable");
@@ -280,8 +284,8 @@ namespace Collections
             //Get a collection of Keys  
             Console.WriteLine("Chaves:");
             ICollection keys = ht.Keys;
-            foreach (int i in keys)
-                Console.WriteLine("Key: " + i + " Value: " + ht[i]); ;
+            foreach (int k in keys)
+                Console.WriteLine("Key: " + k + " Value: " + ht[k]); ;
             ht.Remove(3);
             ht.Clear();
 
@@ -403,6 +407,28 @@ namespace Collections
             {
                 Console.WriteLine("Mat= " + c.matricula);
             }
+
+            #endregion
+
+
+            #region HasTableIII
+
+            GerePessoas hp = new GerePessoas();
+            Pessoa y = new Pessoa();
+            y.nome = "Ola";
+            hp.AddPessoa(y);
+            hp[y.nome] = y;         //Usa Indexador
+            
+          
+            Pessoa x = new Pessoa();
+            x.nome = "Ole";
+            hp.AddPessoa(x);
+
+            Pessoa z = new Pessoa();
+            z.nome = "Luis";
+            hp.AddPessoa(z);
+
+            bool b = hp.ExistePessoa(z.nome);
 
             #endregion
         }

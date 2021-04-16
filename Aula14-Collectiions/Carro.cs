@@ -12,7 +12,7 @@
 **/
 using System;
 
-namespace Collections
+namespace MyCollections
 {
     class Carro : IComparable
     {

@@ -3,7 +3,7 @@
  * Array
  * ArrayList
  * Etc.
- * Ordenar Collections
+ * Ordenar MyCollections
  *  1º Criar Classe X:IComparer
  *  2º Criar método Compare com return (1,-1 ou 0)
  *  3º Usar: arrayList.Sort(new X()) ou
@@ -18,7 +18,7 @@ using System;
 using System.Collections;
 using System.Text;
 
-namespace Collections
+namespace MyCollections
 {
     /// <summary>
     /// Auxiliar para Ordenação
@@ -31,7 +31,7 @@ namespace Collections
 
 
     /// <summary>
-    /// Para Sort de Collections
+    /// Para Sort de MyCollections
     /// </summary>
     class MyComparer : IComparer
     {

@@ -1,5 +1,5 @@
 ﻿/*
- * Collections
+ * MyCollections
  * 
  * http://www.tutorialspoint.com/csharp/csharp_collections.htm
  * 
@@ -11,11 +11,11 @@
  * LPII
  * by lufer
  * */
-using System;
+
 using System.Collections;
 using System.Text;
 
-namespace Collections
+namespace MyCollections
 {
     /// <summary>
     /// Gerir uma HashTable

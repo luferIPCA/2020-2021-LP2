@@ -1,5 +1,5 @@
 ﻿/*
- * Collections
+ * MyCollections
  * http://www.tutorialspoint.com/csharp/csharp_collections.htm
  * 
  * ArrayList
@@ -12,7 +12,7 @@ using System;
 using System.Collections;
 using System.Text;
 
-namespace Collections
+namespace MyCollections
 {
     /// <summary>
     /// Gerir um ArrayList
@@ -20,7 +20,7 @@ namespace Collections
     class MyArrayList 
     {
         
-        private ArrayList myArr;
+        ArrayList myArr;
 
         #region Construtores
         public MyArrayList()
@@ -42,7 +42,7 @@ namespace Collections
         public ArrayList MyArr
         {
             //get { return (ArrayList)myArr.Clone(); }
-            get { return myArr; }
+            get { return myArr;}
             set { myArr=value;}
         }
         #endregion
@@ -110,6 +110,17 @@ namespace Collections
                 buffer.Append( ((Pessoa)enu.Current).nome + "\n" );
             }
             return buffer;
+        }
+
+
+        public bool Insert(object x)
+        {
+            if (!myArr.Contains(x))
+            {
+                myArr.Add(x);
+                return true;
+            }
+            return false;
         }
 
         #endregion

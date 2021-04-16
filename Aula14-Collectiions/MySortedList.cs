@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Text;
 
-namespace Collections
+namespace MyCollections
 {
     class MySortedList
     {

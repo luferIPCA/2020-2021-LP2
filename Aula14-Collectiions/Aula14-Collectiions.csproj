@@ -7,8 +7,8 @@
     <ProjectGuid>{A2E10035-D27E-4C3A-81B7-C18149BBC211}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>_2017_04_07___Aula_9___Collections</RootNamespace>
-    <AssemblyName>2017-04-07 - Aula 9 - Collections</AssemblyName>
+    <RootNamespace>Collections</RootNamespace>
+    <AssemblyName>Collections</AssemblyName>
     <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -39,9 +39,12 @@
   <ItemGroup>
     <Compile Include="Carro.cs" />
     <Compile Include="Compare.cs" />
+    <Compile Include="GereArrayList.cs" />
     <Compile Include="MyArrayList.cs" />
     <Compile Include="MyHash.cs" />
     <Compile Include="MySortedList.cs" />
+    <Compile Include="GerePessoas.cs" />
+    <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
