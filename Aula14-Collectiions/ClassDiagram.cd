@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="MyCollections.Carro" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="3" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Carro.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyCollections.MyComparer" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAA=</HashCode>
+      <FileName>Compare.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="MyCollections.GereArrayList" Collapsed="true">
+    <Position X="4.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEAAAA=</HashCode>
+      <FileName>GereArrayList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyCollections.GerePessoas" Collapsed="true">
+    <Position X="28" Y="10.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACACAAAAAAACAAACAUAAAAEAAAEA=</HashCode>
+      <FileName>GerePessoas.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyCollections.MyArrayList" Collapsed="true">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAABAAAAAAAEAAAAAQAAAgEAAAA=</HashCode>
+      <FileName>MyArrayList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyCollections.MyHashTable" Collapsed="true">
+    <Position X="6.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAgAAAAgAAAAAAAAAAAQAAAABAAAAAQAAA=</HashCode>
+      <FileName>MyHash.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyCollections.MySortedList" Collapsed="true">
+    <Position X="3" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAiAAAAAAAAAAAAA=</HashCode>
+      <FileName>MySortedList.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyCollections.Pessoa" Collapsed="true">
+    <Position X="4.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Pessoa.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MyCollections.Program" Collapsed="true">
+    <Position X="6.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="MyCollections.SortDirecc" Collapsed="true">
+    <Position X="3" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAQAAAAAA=</HashCode>
+      <FileName>Compare.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

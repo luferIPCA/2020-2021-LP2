@@ -4,10 +4,11 @@ using System.Text;
 
 namespace MyCollections
 {
+
     class MySortedList
     {
         public SortedList st;
-        const int CAPACITY=100;
+        const int CAPACITY = 100;
 
 
         public MySortedList()
@@ -22,4 +23,4 @@ namespace MyCollections
         }
 
     }
-}
+    }

@@ -17,9 +17,9 @@ namespace MyCollections
     /// <summary>
     /// Gerir um ArrayList
     /// </summary>
-    class MyArrayList
+    class MyArrayList : IOperacoes
     {
-        string nome;
+        
         ArrayList myArr;
 
         #region Construtores
@@ -124,6 +124,41 @@ namespace MyCollections
         }
         #endregion
 
-       
+        #region MetodosInterface
+
+        public bool InsertElement(object x)
+        {
+            return Insert(x);
+        }
+
+        public bool RemoveElement(object x)
+        {
+            if (myArr.Contains(x))
+            {
+                myArr.Remove(x);
+                return true;
+            }
+            return false;
+        }
+
+        public bool UpdateElement(object x)
+        {
+            throw new NotImplementedException();
+        }
+
+        public object SelectElements(Type typeValue)
+        {
+            ArrayList aux = new ArrayList();
+            foreach(object o in myArr)
+            {
+                if (o.GetType() == typeValue)
+                {
+                    aux.Add(o);
+                }
+            }
+            return aux;
+        }
+
+        #endregion
     }
 }

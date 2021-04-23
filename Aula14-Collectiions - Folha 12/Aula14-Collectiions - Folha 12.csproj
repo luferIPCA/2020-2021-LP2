@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A2E10035-D27E-4C3A-81B7-C18149BBC211}</ProjectGuid>
+    <ProjectGuid>{5315C6E3-F67C-4750-B456-E782B94D42E0}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Collections</RootNamespace>
@@ -37,19 +37,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Carro.cs" />
-    <Compile Include="Compare.cs" />
     <Compile Include="GereArrayList.cs" />
     <Compile Include="MyArrayList.cs" />
-    <Compile Include="MyHash.cs" />
     <Compile Include="MySortedList.cs" />
     <Compile Include="GerePessoas.cs" />
+    <Compile Include="IOperacoes.cs" />
     <Compile Include="Pessoa.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="ClassDiagram.cd" />
+    <Compile Include="Program2.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

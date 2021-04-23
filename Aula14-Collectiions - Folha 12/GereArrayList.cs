@@ -8,12 +8,11 @@
 **/
 
 using System.Collections;
-using System.Collections.Generic;
 
 namespace MyCollections
 {
     /// <summary>
-    /// Purpose:
+    /// Purpose: Gere qualquer ArrayList de Pessoas
     /// Created by: lufer
     /// Created on: 4/16/2021 11:09:05 AM
     /// </summary>
@@ -78,39 +77,6 @@ namespace MyCollections
                 }
             }
             return null;
-        }
-
-        public static Pessoa Find(List<Pessoa> x, string n)
-        {
-            foreach (object obj in x)
-            {
-                if (obj is Pessoa)
-                {
-                    Pessoa aux = (Pessoa)obj;
-                    if (aux.nome == n)
-                        return aux;
-                }
-            }
-            return null;
-        }
-
-        public static Pessoa Find(Dictionary<int,Pessoa> x, string n)
-        {
-            foreach (object obj in x)
-            {
-                if (obj is Pessoa)
-                {
-                    Pessoa aux = (Pessoa)obj;
-                    if (aux.nome == n)
-                        return aux;
-                }
-            }
-            return null;
-        }
-
-        public static bool Insert(ArrayList x, object o)
-        {
-            return true;
         }
 
         #endregion

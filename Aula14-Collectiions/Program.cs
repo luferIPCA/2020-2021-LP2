@@ -16,12 +16,11 @@
 using System;
 
 using System.Collections;
-using System.Collections.Generic;
 
 namespace MyCollections
 {
 
-     /// <summary>
+    /// <summary>
     /// Demonstrar ArrayList
     /// </summary>
     class Program
@@ -230,8 +229,7 @@ namespace MyCollections
             m.MyArr.Add(p2);
             m.MyArr.Add(p1);        //A Capacidade (capacity) duplica sempre que se esgota a reservada inicialmente
             m.Insert(p1);           //correct!!!
-
-
+            
 
             m.MyArr.Insert(0, p3);  //Insere na posição 0...shift rigth das existentes
             m.MyArr.Remove(p1);
@@ -431,6 +429,14 @@ namespace MyCollections
             bool b = hp.ExistePessoa(z.nome);
 
             #endregion
+
+            MyArrayList xx = new MyArrayList();
+            bool xxx = xx.Insert(new Pessoa());
+
+            
+            //pessoas.Add(new Pessoa());
+            GereArrayList.Insert(pessoas, new Pessoa());
+
         }
 
         /// <summary>
