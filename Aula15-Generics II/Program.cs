@@ -1,4 +1,8 @@
 ﻿/**
+ * Generic classes
+ * https://www.tutorialsteacher.com/csharp/csharp-generics
+ * 
+ * Generic Collections
  * https://msdn.microsoft.com/en-us/library/system.collections.generic.aspx
  * List<T>
  * Dictionary<k,T>
@@ -82,11 +86,12 @@ namespace Generics_II
             Console.ReadKey();
 
             #region Serializing_to_XML
-
+            //Enviar dados da Lista para ficheiro XML
             XmlSerializer serializer = new XmlSerializer(typeof(List<Product>));
             TextWriter textWriter = new StreamWriter(@"c:\temp\ListProductsSerialized.xml");
             serializer.Serialize(textWriter, products);
             textWriter.Close();
+            textWriter.Dispose();
 
             //Deserialize
 
@@ -153,7 +158,7 @@ namespace Generics_II
 
             //Dicionário de string-> Listas(int)
             Dictionary<string, List<int>> dictionary2 = new Dictionary<string, List<int>>();
-
+            dictionary2["Benfica"] = new List<int>();
             dictionary2["Benfica"].Add(120);  //Erro?
 
             //dictionary2.Add("Porto", new List<int>() { 123 });
@@ -291,7 +296,15 @@ namespace Generics_II
             #region SortedList<TKey, TValue>
             //SortedList ordenado pela Key
 
-
+            SortedList<DateTime, List<Product>> sl = new SortedList<DateTime, List<Product>>();
+            sl.Add(new DateTime(2021, 04, 28), new List<Product>());
+            DateTime date = new DateTime(2021, 04, 28);
+            sl[date].Add(new Product("Maquina", 128));
+            date = date.AddDays(3);
+            if (!sl.ContainsKey(date))
+                sl.Add(date, new List<Product>());
+            sl[date].Add(new Product("Maquina", 129));
+            
             #endregion
 
             #region LINQ
@@ -309,7 +322,7 @@ namespace Generics_II
 
             List<Product> parts;
             parts = products.FindAll(x => x.name.Contains("ola"));
-            Product p1 = products.Find(x => x.name.Contains("ola"));
+            Product p2 = products.Find(x => x.name.Contains("ola"));
             bool aux2 = products.Exists(x => x.name.CompareTo("ola") == 0);
 
             //h1
@@ -322,64 +335,43 @@ namespace Generics_II
             });
             #endregion
 
+            #region GENERIC_CLASS
+
+            XInt x1 = new XInt();
+            x1.x = 12;
+            x1.valores[2] = 13;
+
+
+            XString x2 = new XString();
+            x2.x = "ola";
+            x2.valores[0] = "ok";
+
+
+            X<int> x3 = new X<int>();
+            x3.x = x1.x;
+            x3.valores[0] = x1.valores[0];
+
+            X<string> x4 = new X<string>();
+
+            X<double> x5 = new X<double>();
+
+            Z<int, string> x6 = new Z<int, string>();
+            x6.X = 12;
+            x6.valores = "ola";
+
+            Z<int, Hashtable> x7 = new Z<int, Hashtable>();
+            x7.X = 12;
+            x7.valores[12] = "ola";
+
+            //x7.X = "12";
+
+            Z<Product, Dictionary<string, List<Product>>> x8 = new Z<Product, Dictionary<string, List<Product>>>();
+            x8.X = new Product();
+            //x8.X = 12;
+
+            #endregion
+
             Console.ReadKey();
         }  
     }
-
-
-    #region Serializar Dictionary
-
-    [XmlRoot("Dictionary")]
-    public class SerializableDictionary<TKey, TValue> : Dictionary<TKey, TValue>, IXmlSerializable
-    {
-        #region IXmlSerializable Members
-        public System.Xml.Schema.XmlSchema GetSchema()
-        {
-            return null;
-        }
-        public void ReadXml(System.Xml.XmlReader reader)
-        {
-            XmlSerializer keySerializer = new XmlSerializer(typeof(TKey));
-            XmlSerializer valueSerializer = new XmlSerializer(typeof(TValue));
-            bool wasEmpty = reader.IsEmptyElement;
-            reader.Read();
-            if (wasEmpty)
-                return;
-            while (reader.NodeType != System.Xml.XmlNodeType.EndElement)
-            {
-                reader.ReadStartElement("item");
-                reader.ReadStartElement("key");
-                TKey key = (TKey)keySerializer.Deserialize(reader);
-                reader.ReadEndElement();
-                reader.ReadStartElement("value");
-                TValue value = (TValue)valueSerializer.Deserialize(reader);
-                reader.ReadEndElement();
-                this.Add(key, value);
-                reader.ReadEndElement();
-                reader.MoveToContent();
-            }
-            reader.ReadEndElement();
-        }
-        public void WriteXml(System.Xml.XmlWriter writer)
-        {
-            XmlSerializer keySerializer = new XmlSerializer(typeof(TKey));
-            XmlSerializer valueSerializer = new XmlSerializer(typeof(TValue));
-            foreach (TKey key in this.Keys)
-            {
-                writer.WriteStartElement("item");
-                writer.WriteStartElement("key");
-                keySerializer.Serialize(writer, key);
-                writer.WriteEndElement();
-                writer.WriteStartElement("value");
-                TValue value = this[key];
-                valueSerializer.Serialize(writer, value);
-                writer.WriteEndElement();
-                writer.WriteEndElement();
-            }
-        }
-
-        
-        #endregion
-    }
-    #endregion
 }

@@ -9,6 +9,8 @@
 
 using System;
 
+using System.Collections;
+
 namespace Generics
 {
     class Program
@@ -30,7 +32,7 @@ namespace Generics
             #endregion
 
             #region CLASSENORMAL_REFS
-            //MyClass m = new MyClass();
+
             int[] valores = new int[2];
 
             m[0] = int.Parse("12");
@@ -48,8 +50,6 @@ namespace Generics
            
             //Classe de inteiros
             MyGenericArray<int> m1 = new MyGenericArray<int>();
-
-            
 
             //uso de Indexadores
             m1[0] = 12;
@@ -71,7 +71,90 @@ namespace Generics
 
             Console.WriteLine(m2[0]);
             Console.WriteLine(m2[1]);
+
+            //Class Generica
+
+            ReallyGeneric<MyGenericArray<string>> rgc = new ReallyGeneric<MyGenericArray<string>>(m2);
+
+            MyGenericArray<string> xxx = rgc.Aux;
+
+
             #endregion
+
+            #region CLASSGENERIC-I
+            // Declare a List of type int, then loop through the List
+            CustomList<int> list1 = new CustomList<int>();
+
+            for (int x = 0; x < 10; x++)
+            {
+                list1.Add(x);
+            }
+
+            foreach (int i in list1)
+            {
+                System.Console.Write(i + " ");
+            }
+            System.Console.WriteLine("\nDone\n");
+
+            // Declare a List of type string, then loop through the List
+            CustomList<string> list2 = new CustomList<string>();
+            list2.Add("Martin");
+            list2.Add("Zahn");
+            list2.Add("Oberdiessbach");
+
+            foreach (string s in list2)
+            {
+                System.Console.Write(s + " ");
+            }
+            System.Console.WriteLine("\nDone\n");
+
+            // Use Indexer on the List
+            string s1 = list2[1];
+
+            // Declare a List of type ExampleClass, then loop through the List
+            // ExampleClass holds any DataType.
+            CustomList<ExampleClass> list3 = new CustomList<ExampleClass>();
+            ExampleClass a = new ExampleClass(7);
+            list3.Add(a);
+
+            ExampleClass b = new ExampleClass("Hello");
+            list3.Add(b);
+
+            foreach (ExampleClass o in list3)
+            {
+                System.Console.Write(o.objGet.ToString() + " ");
+            }
+            System.Console.WriteLine("\nDone");
+
+            // Use Indexer on the List
+            ExampleClass c = list3[0];
+            System.Console.Write("From Indexer: " + c.objGet.ToString() + "\n");
+            #endregion
+
+
+            X aux = new X();
+            aux.valores[0] = 12;
+
+            X<int> aux2 = new X<int>();
+            aux2.a = 12;
+            aux2.valores[0] = aux2.a;
+
+
+            X<string> aux3 = new X<string>();
+            aux3.a = "ola";
+            aux3.valores[0] = aux2.a.ToString();
+
+
+            X<int, string> aux4 = new X<int, string>();
+            aux4.a = aux2.a;
+            aux4.Valores= aux3.a;
+            aux4.Valores = 12;
+
+            X<int, MyClass> aux5 = new X<int, MyClass>();
+
+            X<string, Hashtable> aux6 = new X<string, Hashtable>();
+
+
 
             Console.ReadKey();
         }

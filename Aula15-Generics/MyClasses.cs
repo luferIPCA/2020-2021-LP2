@@ -122,7 +122,8 @@ namespace Generics
         {
             X aux = (X)(object)dados[x];            
             dados[x] = dados[y];
-            dados[y] = (T)(Convert.ChangeType(aux, typeof(T)));                 
+            dados[y] = (T)(Convert.ChangeType(aux, typeof(T)));
+            //dados[y] = (T)(object)(aux);
         }
 
         /// <summary>
@@ -150,6 +151,7 @@ namespace Generics
     class ReallyGeneric<T>
     {
         private T aux;
+
 
         public ReallyGeneric(T o)
         {
@@ -230,15 +232,160 @@ namespace Generics
     }
 
 
-    #region Multiple Generic Rypes
 
-    /// <summary>
-    /// List Node 
-    /// Adaptado de http://msdn.microsoft.com/en-us/library/ms379564%28v=vs.80%29.aspx
-    /// </summary>
-    /// <typeparam name="K"></typeparam>
-    /// <typeparam name="T"></typeparam>
-    class Node<K, T>
+    #region Generic Types - I - LISTS
+    // --------------------------------------------------------------------
+    // The following code example shows a simple generic linked-list
+    // class for demonstration purposes. (In most cases, it is recommended
+    // that you use the List<T> class provided by the .NET Framework class
+    // library, rather than create your own.) The type parameter T is
+    // used in several places where a concrete type would normally be
+    // used to indicate the type of the item stored in the list.
+    // https://www.akadia.com/services/dotnet_generics.html
+    // --------------------------------------------------------------------
+
+    // Type parameter T in angle brackets <>
+    public class CustomList<T>
+    {
+        // Fields
+        private Node head;
+
+        // The nested class is also generic on T
+        private class Node
+        {
+            // Fields
+            private Node next;
+
+            // T as private member data type
+            private T data;
+
+            // T used in non-generic constructor
+            public Node(T pData)
+            {
+                next = null;
+                data = pData;
+            }
+
+            // Properties
+            public Node Next
+            {
+                get
+                {
+                    return next;
+                }
+                set
+                {
+                    next = value;
+                }
+            }
+
+            // T as return type of the Property
+            public T Data
+            {
+                get
+                {
+                    return data;
+                }
+                set
+                {
+                    data = value;
+                }
+            }
+        }
+
+        // Constructor
+        public CustomList()
+        {
+            head = null;
+        }
+
+        // T as method parameter type:
+        public void Add(T pType)
+        {
+            Node n = new Node(pType);
+            n.Next = head;
+            head = n;
+        }
+
+        // Enables foreach on the List
+        public IEnumerator<T> GetEnumerator()
+        {
+            Node current = head;
+            while (current != null)
+            {
+                yield return current.Data;
+                current = current.Next;
+            }
+        }
+
+        // Provides indexing on the List
+        public T this[int index]
+        {
+            get
+            {
+                int ctr = 0;
+                Node current = head;
+                while (current != null && ctr <= index)
+                {
+                    if (ctr == index)
+                    {
+                        return current.Data;
+                    }
+                    else
+                    {
+                        current = current.Next;
+                    }
+                    ++ctr;
+                }
+                return default(T);
+            }
+        }
+
+        // Provides ToString() on the List
+        public override string ToString()
+        {
+            if (this.head != null)
+            {
+                return this.head.ToString();
+            }
+            else
+            {
+                return string.Empty;
+            }
+        }
+    }
+
+    // My own Class of any Datatype
+        class ExampleClass
+        {
+            private object o;
+
+            public ExampleClass(object obj)
+            {
+                o = obj;
+            }
+
+            public object objGet
+            {
+                get
+                {
+                    return o;
+                }
+            }
+        }
+
+        #endregion
+
+
+    #region Multiple Generic Types - II
+
+        /// <summary>
+        /// List Node 
+        /// Adaptado de http://msdn.microsoft.com/en-us/library/ms379564%28v=vs.80%29.aspx
+        /// </summary>
+        /// <typeparam name="K"></typeparam>
+        /// <typeparam name="T"></typeparam>
+        class Node<K, T>
     {
         public K Key;
         public T Item;
@@ -271,7 +418,7 @@ namespace Generics
         {
             m_Head = new Node<K, T>();
         }
-        
+
         public void AddHead(K key, T item)
         {
             Node<K, T> newNode = new Node<K, T>(key, item, m_Head.NextNode);
@@ -279,8 +426,38 @@ namespace Generics
         }
 
 
-        
+
     }
 
     #endregion
+
+    class X
+    {
+        public int a;
+        public int[] valores;
+    }
+
+    class X<T>
+    {
+        public T a;
+        public T[] valores;
+
+    }
+
+    class X<K, T>
+    {
+        public K a;
+        T valores;
+         
+
+        public T Valores
+        {
+            get => valores;
+            set => valores = value;
+        }
+
+
+    }
+
+
 }
