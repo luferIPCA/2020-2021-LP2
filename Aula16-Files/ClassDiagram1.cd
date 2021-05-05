@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FilesAndFolders.Colmeia">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAgAQAAAAAAABAAAAAQAAAAAAA=</HashCode>
+      <FileName>Varios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesAndFolders.Apiarios">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAgAEIAAAkAAAAQAAAACAQCAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Varios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesAndFolders.Apicultura">
+    <Position X="4.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAQAECEAAAAAIAAAQAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Varios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesAndFolders.Pessoa">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABABAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Varios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesAndFolders.Pessoas">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgIAAAAAAAAAAAAAAAAACAAAEAACBAAIAAAAAAAA=</HashCode>
+      <FileName>Varios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FilesAndFolders.Varios">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Varios.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

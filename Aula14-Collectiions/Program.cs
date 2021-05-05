@@ -200,7 +200,7 @@ namespace MyCollections
 
             Console.ReadKey();
             //n.Sort();                // Porque falha? 
-            n.Sort(new MyComparer(SortDirecc.Asc));
+            n.Sort(new MyComparer(SortDirecc.Desc));
 
             Console.WriteLine("Depois de Ordenar");
             Show(n);
@@ -385,7 +385,6 @@ namespace MyCollections
 
             #endregion
 
-
             #region Carros
 
             ArrayList carros= new ArrayList();
@@ -407,7 +406,6 @@ namespace MyCollections
             }
 
             #endregion
-
 
             #region HasTableIII
 
@@ -435,7 +433,7 @@ namespace MyCollections
 
             
             //pessoas.Add(new Pessoa());
-            GereArrayList.Insert(pessoas, new Pessoa());
+            //GereArrayList.Insert(pessoas, new Pessoa());
 
         }
 
