@@ -14,22 +14,29 @@ namespace Exercicio_Folha_14
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             Console.WriteLine("Ola Mundo");
+
+            Book b = new Book();
+            b.text = "Ola";
+            Output o = new Output();
+            o.printTextToConsole(b);
+            //o.printTextToAnotherMedium(b);
         }
     }
 
+    #region Grupo2
 
     /// <summary>
     /// SR Principle
     /// </summary>
-    public class Book
+    public class Book : IText
     {
 
         private String name;
         private String author;
-        private String text;
+        public String text;
 
         //constructor, getters and setters
 
@@ -49,28 +56,51 @@ namespace Exercicio_Folha_14
         {
             // our code for formatting and printing the text
         }
+
+
+        public string output()
+        {
+            return text;
+        }
+
+        public override string ToString()
+        {
+            return output();
+        }
         #endregion
+    }
+
+
+    interface IText
+    {
+        string output();
+        string ToString();
     }
 
     class Output
     {
-        void printTextToConsole(String s)
+        public void printTextToConsole(IText x)
         {
             // our code for formatting and printing the text
+            Console.WriteLine(x.ToString());
         }
 
-        void printTextToAnotherMedium(String text)
+        public void printTextToAnotherMedium(String text)
         {
             // code for writing to any other location..
         }
     }
+
+    #endregion
+
+
+    #region Grupo3
 
     /// <summary>
     /// OC Princinple
     /// </summary>
     public class Guitar
     {
-
         private String make;
         private String model;
         private int volume;
@@ -78,15 +108,16 @@ namespace Exercicio_Folha_14
         //Constructors, getters & setters
     }
 
-    public class SuperCoolGuitarWithFlames : Guitar
+    public class GuitarWithCosts : Guitar
     {
-        private String flameColor;
+        private double custo;
 
         //constructor, getters + setters
     }
 
+    #endregion
 
-    #region DIP
+    #region Grupo4
 
     public class StandardKeyboard
     {
@@ -97,7 +128,7 @@ namespace Exercicio_Folha_14
         //
     }
     /// <summary>
-    /// DIP
+    /// Violação de DIP
     /// </summary>
     public class Windows98Machine
     {
@@ -107,7 +138,7 @@ namespace Exercicio_Folha_14
 
         public Windows98Machine()
         {
-            monitor = new Monitor();
+            monitor = new Monitor();            //Viola DIP
             keyboard = new StandardKeyboard();
         }
     }
@@ -130,6 +161,11 @@ namespace Exercicio_Folha_14
     public class StandardKeyboardDIP : IKeyboard
     {
         //
+    }
+
+    public class QWERTKeyboard : IKeyboard
+    {
+
     }
     #endregion
 }

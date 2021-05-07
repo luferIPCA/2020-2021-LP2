@@ -177,7 +177,7 @@ namespace Aula17_OC
         }
 
         /// <summary>
-        /// Mais uma tarefa???
+        /// Mais uma tarefa??? Viola SRP!!!
         /// </summary>
         public static void ShowAreasScreen()
         {

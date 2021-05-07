@@ -85,7 +85,6 @@ namespace Aula17_SRP
             ArrayList tot=new ArrayList();
 
             foreach (object s in shapes) {
-                //s.Area();
                 //if (typeof(Quadrado) == s.GetType())
                 //{
                 //    tot.Add(Math.Pow(((Quadrado)s).lado, 2));              //lado^2   

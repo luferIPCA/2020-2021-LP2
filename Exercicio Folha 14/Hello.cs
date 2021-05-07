@@ -21,80 +21,125 @@ namespace Exercicio_Folha_14
     {
         /// <summary>
         /// SOLID: 
-        /// Falhas:
+        ///  Falhas:
         ///  - Apenas escreve no ecrã. E se quisermos escrever num ficheiro?
         ///  - Apenas escreve "Olá MUndo"...e se quisermos escrever outras coisa?
         ///  - E se quisermos a acrescentar mais "features"?
+        ///  - ????
         /// </summary>
         static void Main()
         {
             //1
             //Console.WriteLine("Ola Mundo");
             //2
-            IMessageCollector mensagem = new ConsoleMessageCollector();
+            IGetMessage mensagem = new ConsoleGetMessage();
             ITextWriter writer = new ConsoleTextWriter();
-            PublicMessage publicMessage = new PublicMessage(mensagem, writer);
-            publicMessage.Go();
+            
+
+            //auxiliar
+            PrepareMessage msg = new PrepareMessage(mensagem, writer);
+            msg.Go();
+
+            ITextWriter writer2 = new FileTextWriter();
+            PrepareMessage msg2 = new PrepareMessage(mensagem, writer2);
+            msg2.Go();
 
             Console.ReadKey();
 
         }
 
-        //1 - Onde escrever a Mensagem (ver Adapter Pattern)
+        #region ESCREVEMENSAGEM
+
+        //2 - Onde escrever a Mensagem (ver Adapter Pattern)
+
         public interface ITextWriter
         {
-            void WriteText(string text);
+            void WriteText(string obj);
         }
         public class ConsoleTextWriter : ITextWriter
         {
-            public void WriteText(string text)
+            public void WriteText(string t)
             {
-                Console.WriteLine(text);
+                Console.WriteLine(t.ToString());
             }
         }
         public class FileTextWriter : ITextWriter
         {
-            public void WriteText(string text)
+            public void WriteText(string t)
             {
                 //escrever em ficheiro
             }
         }
-
-        //2 - Que texto escrever
-
-        public interface IMessageCollector
+        public class PhoneTextWriter : ITextWriter
         {
-            string CollectMessageFromUser();
+            public void WriteText(string text)
+            {
+                //escrever para phone!!!
+            }
         }
-        public class ConsoleMessageCollector : IMessageCollector
+        public class TrainTextWriter : ITextWriter
         {
-            public string CollectMessageFromUser()
+            public void WriteText(string text)
+            {
+                //escreverpor comboio!!!
+            }
+        }
+
+        #endregion
+
+        #region LERMENSAGEM
+
+        //1 - Que texto escrever
+
+        public interface IGetMessage
+        {
+            string GetMessage();
+        }
+        public class ConsoleGetMessage : IGetMessage
+        {
+            public string GetMessage()
             {
                 Console.Write("Que mensagem pretende: ");
                 return Console.ReadLine();
             }
         }
-
-        //3 - Juntar features numa noca class
-
-        public class PublicMessage
+        public class FormGetMessage : IGetMessage
         {
-            private  IMessageCollector _messageCollector;
-            private  ITextWriter _textWriter;
-
-            public PublicMessage(IMessageCollector messageCollector, ITextWriter textWriter)
+            public string GetMessage()
             {
-                if (messageCollector == null) throw new ArgumentNullException("Message collector");
-                if (textWriter == null) throw new ArgumentNullException("Text writer");
-                _messageCollector = messageCollector;
-                _textWriter = textWriter;
+                //ler dados de uma form
+                return "";
+            }
+        }
+
+        #endregion
+
+        #region LER_E_ESCREVERMENSAGEM
+
+        //3 - Juntar features numa unica class
+
+        public class PrepareMessage
+        {
+            private  IGetMessage message;
+            private  ITextWriter writer;
+
+            public PrepareMessage(IGetMessage message, ITextWriter writer)
+            {
+                if (message == null) 
+                    throw new ArgumentNullException("Message collector");
+                if (writer == null) 
+                    throw new ArgumentNullException("Text writer");
+                this.message = message;
+                this.writer = writer;
             }
 
             public void Go()
             {
-                string message = _messageCollector.CollectMessageFromUser();
-                _textWriter.WriteText(message);
+                string msg = message.GetMessage();
+                writer.WriteText(msg);
             }
         }
+
+        #endregion
     }
 }
