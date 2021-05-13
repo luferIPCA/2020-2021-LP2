@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula17-OC", "Aula17-OC\Aula
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio Folha 14", "Exercicio Folha 14\Exercicio Folha 14.csproj", "{8A1D66E1-E53D-48B2-9212-EA48BCFE156B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula18-LINQ", "Aula18-LINQ\Aula18-LINQ.csproj", "{98D5A677-6FE7-4B64-882B-7C25E210A9A5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -183,6 +185,10 @@ Global
 		{8A1D66E1-E53D-48B2-9212-EA48BCFE156B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8A1D66E1-E53D-48B2-9212-EA48BCFE156B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8A1D66E1-E53D-48B2-9212-EA48BCFE156B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98D5A677-6FE7-4B64-882B-7C25E210A9A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98D5A677-6FE7-4B64-882B-7C25E210A9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98D5A677-6FE7-4B64-882B-7C25E210A9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98D5A677-6FE7-4B64-882B-7C25E210A9A5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
