@@ -1,34 +1,45 @@
 ﻿/*
-*	<copyright file="Aula1.cs" company="IPCA">
-*		Copyright (c) 2021 All Rights Reserved
-*	</copyright>
-* 	<author>lufer</author>
-*   <date>2/26/2021 9:45:58 AM</date>
-*	<description>
-*	Revisão de Conceitos de C como base para C#
-*	CLS
-*	</description>
-**/
-using System;
-
-struct X
-{
-    public int a;
-
-}
+ * <copyright file="Programa.cs" company="PlaceholderCompany">
+ * Copyright (c) PlaceholderCompany. All rights reserved.
+ * </copyright>
+ * <author>lufer</author>
+ * <date>2/26/2021 9:45:58 AM</date>
+ * <description>
+ * Revisão de Conceitos de C como base para C#
+ * CLS
+ * </description>
+*
+ */
 
 namespace Aula1
 {
+    using System;
+
+    /// <summary>
+    /// Faz qualquer coisa.
+    /// </summary>
+    internal struct X
+    {
+        private readonly int a;
+
+        /// <summary>
+        /// Gets: Faz qualquer coisa.
+        /// </summary>
+        public int A
+        {
+            get { return this.a; }
+        }
+
+    }
     /// <summary>
     /// Resumo do que a função faz...
     /// </summary>
-    /// <remarks>
-    /// </remarks>
+    /// <remarks>Ok</remarks>
     /// <see cref=""/>
     public class Programa
     {
-        //int x=2;          //variavel paera....
-        float z;        //ATENÇÃO: esta variavel...
+        // int x=2;          // variavel paera....
+        float z;            // ATENÇÃO: esta variavel...
 
         #region UM
         static int Main()
@@ -41,11 +52,11 @@ namespace Aula1
             bool e=true;
             double f=2.4;
 
-            //int valores[10]={1,2,3};
+            // int valores[10]={1,2,3};
 
             int[] valores = { 12, 34, 5, 6 };
-            int[] val = new int[10];            //gestão de memória...
-            char[] nome = new char[20];         //char nome[20];
+            int[] val = new int[10];            // gestão de memória...
+            char[] nome = new char[20];         // char nome[20];
 
             #endregion
 
@@ -59,7 +70,7 @@ namespace Aula1
             {
                 e = false;
             }
-            //?:
+            // ?:
              e = (a > 0) ? true : false;
 
             switch (a)
@@ -69,7 +80,7 @@ namespace Aula1
                 default: e = !e; break;
             }
 
-            //for
+            // for
             for(int j = 0; j < 10; j++)
             {
                 a++;
@@ -83,14 +94,14 @@ namespace Aula1
                     a++;
             }
 
-            //while
+            // while
             while (i < 10)
             {
                 a++;
                 i++;
             }
 
-            //do..while
+            // do..while
             do
             {
                 if (a != 0) { 
@@ -101,12 +112,12 @@ namespace Aula1
                 i++;
             } while (i <= 10);
 
-            //foreach
+            // foreach
 
             #endregion
 
 
-            //int x = Soma(2, 3);
+            // int x = Soma(2, 3);
             X x = Soma(2, 3);
             Console.WriteLine(x.a);
 
@@ -117,6 +128,10 @@ namespace Aula1
 
         }
 
+        static int MAIN()
+        {
+            return 0;
+        }
 
         #region METODOS
         /// <summary>
@@ -130,8 +145,8 @@ namespace Aula1
 
         }
 
-        //#pragma region UM
-        //#pragma endregion
+        // #pragma region UM
+        // #pragma endregion
 
         /// <summary>
         /// Calcula a soma

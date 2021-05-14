@@ -148,7 +148,7 @@ namespace Generics
             X<int, string> aux4 = new X<int, string>();
             aux4.a = aux2.a;
             aux4.Valores= aux3.a;
-            aux4.Valores = 12;
+            aux4.Valores = "12";
 
             X<int, MyClass> aux5 = new X<int, MyClass>();
 

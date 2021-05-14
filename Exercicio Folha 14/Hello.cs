@@ -27,7 +27,7 @@ namespace Exercicio_Folha_14
         ///  - E se quisermos a acrescentar mais "features"?
         ///  - ????
         /// </summary>
-        static void Main()
+        static void Main1()
         {
             //1
             //Console.WriteLine("Ola Mundo");
