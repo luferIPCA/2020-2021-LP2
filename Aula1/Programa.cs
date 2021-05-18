@@ -14,13 +14,15 @@
 namespace Aula1
 {
     using System;
+    using System.Reflection;
 
     /// <summary>
     /// Faz qualquer coisa.
     /// </summary>
     internal struct X
     {
-        private readonly int a;
+        //private readonly int a;
+        int a;
 
         /// <summary>
         /// Gets: Faz qualquer coisa.
@@ -28,6 +30,7 @@ namespace Aula1
         public int A
         {
             get { return this.a; }
+            set { a = value; }
         }
 
     }
@@ -52,6 +55,8 @@ namespace Aula1
             bool e=true;
             double f=2.4;
 
+
+            
             // int valores[10]={1,2,3};
 
             int[] valores = { 12, 34, 5, 6 };
@@ -119,10 +124,22 @@ namespace Aula1
 
             // int x = Soma(2, 3);
             X x = Soma(2, 3);
-            Console.WriteLine(x.a);
+            Console.WriteLine(x.A);
 
-            Soma(2, 3, ref x.a);
-            Console.WriteLine(x.a);
+            //------
+            //João Carlos - "variant"=="dynamic"
+            Type tip = Type.GetType(x.GetType().ToString());
+            dynamic uretilenNesne = Activator.CreateInstance(tip);
+            uretilenNesne.A = 12;
+
+            PropertyInfo pinfo = tip.GetProperty("A");
+            object o = pinfo.GetValue(uretilenNesne, null);
+            //----------------
+            
+
+
+            Soma(2, 3, ref a);
+            Console.WriteLine(x.A);
 
             return 1;
 
@@ -156,8 +173,8 @@ namespace Aula1
         /// <returns>Res</returns>
         static X Soma(int x, int y)
         {
-            X aux;
-            aux.a = x + y;
+            X aux = new X();
+            aux.A = x + y;
             return aux;
         }
 

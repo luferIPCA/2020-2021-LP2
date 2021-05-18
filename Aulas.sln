@@ -63,6 +63,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Exercicio Folha 14", "Exerc
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Aula18-LINQ", "Aula18-LINQ\Aula18-LINQ.csproj", "{98D5A677-6FE7-4B64-882B-7C25E210A9A5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Teste", "Teste\Teste.csproj", "{2886E146-7C70-4A34-BBDE-8C2B72E790E5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "2020-05-21 - Aula 20 - Delegates", "2021-05-17 - Aula 20 - Delegates\2020-05-21 - Aula 20 - Delegates.csproj", "{84AD26F9-5552-47B2-849A-8E3967196525}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -189,6 +193,14 @@ Global
 		{98D5A677-6FE7-4B64-882B-7C25E210A9A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{98D5A677-6FE7-4B64-882B-7C25E210A9A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{98D5A677-6FE7-4B64-882B-7C25E210A9A5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2886E146-7C70-4A34-BBDE-8C2B72E790E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2886E146-7C70-4A34-BBDE-8C2B72E790E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2886E146-7C70-4A34-BBDE-8C2B72E790E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2886E146-7C70-4A34-BBDE-8C2B72E790E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{84AD26F9-5552-47B2-849A-8E3967196525}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{84AD26F9-5552-47B2-849A-8E3967196525}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{84AD26F9-5552-47B2-849A-8E3967196525}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{84AD26F9-5552-47B2-849A-8E3967196525}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
