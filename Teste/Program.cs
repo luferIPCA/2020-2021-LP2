@@ -5,14 +5,17 @@
 
 using System;
 using System.Collections.Generic;
+using System.Collections;
 using System.IO;
 using System.Runtime.Serialization.Formatters.Binary;
 
 namespace Teste
 {
-   
+
 
     #region TESTE ESIN    
+
+    #region GRUPO I
     abstract class A
     {
         int x;
@@ -86,6 +89,203 @@ namespace Teste
         /// </summary>
         bool Equal(A x, A y);
     }
+    #endregion
+
+    #region GRUPO II
+
+    public class PessoasAprovadas
+    {
+        public List<Pessoa> pessoas;
+        string anoLetivo;       //"20-21"
+
+        public PessoasAprovadas(string ano)
+        {
+            pessoas = new List<Pessoa>();
+            anoLetivo = ano;
+        }
+    }
+
+    public class GrupoII_ESIN
+    {
+        Hashtable alunos = new Hashtable(); //<int, Pessoas>
+
+        public bool InserePessoaAprovada (Pessoa p, string ano)
+        {
+            //Verificar se a chave "ano" já existe
+            //???
+            //alunos.Keys
+            //Se existir
+                ((PessoasAprovadas)(alunos[ano])).pessoas.Add(p);
+            //Se não existir
+            PessoasAprovadas aux = new PessoasAprovadas(ano);    //Criar "lista"
+                aux.pessoas.Add(p);             //Adicionar nova pessoa à lista
+                alunos[ano] = aux;              //ligar à Hash
+                return true;
+        }
+
+        /// <summary>
+        /// Grupo II - devolve todas as pessoas aprovadas num determinado ano
+        /// </summary>
+        /// <param name="ano"></param>
+        /// <returns></returns>
+        public List<Pessoa> TodasPessoasAprovadas(string ano)
+        {
+            List<Pessoa> res = new List<Pessoa>();
+
+            PessoasAprovadas aux = (PessoasAprovadas)(alunos[ano]);
+
+            if (aux.pessoas.Count == 0) return null;
+            //Todas as pessoas que constam na lista estão aprovadas
+            foreach(Pessoa p in aux.pessoas)
+            {
+                res.Add(p);
+            }
+            return res;
+        }
+
+        public PessoasAprovadas TodasPessoasAprovadasII(string ano)
+        {
+           //verificar se ano pertence às Keys da Hash
+            PessoasAprovadas aux = (PessoasAprovadas)(alunos[ano]);
+
+            if (aux.pessoas.Count == 0) return null;
+
+            return aux;
+        }
+
+
+
+
+
+    }
+    #endregion
+
+    #region GRUPO III
+
+    public class PessoaG3
+    {
+        public bool vacinado;
+        public int nc;
+        public string nome;
+        public DateTime dataVacina;
+        public int numVacinas;
+        //string regiao;
+    }
+
+    public class PessoasG3
+    {
+        List<PessoaG3> vacinados;
+        string regiao;
+
+        public PessoasG3(string regiao)
+        {
+            vacinados = new List<PessoaG3>();
+            this.regiao = regiao;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="p"></param>
+        /// <returns></returns>
+        public bool VacinarPessoa(PessoaG3 p)
+        {
+            //Verificar se existe
+            //Se existir
+            if (vacinados.Contains(p))
+            {
+                if(vacinados[vacinados.IndexOf(p)].numVacinas==1)
+                {
+                    vacinados[vacinados.IndexOf(p)].numVacinas = 2;
+                    vacinados[vacinados.IndexOf(p)].vacinado = true;
+                }
+                else
+                {
+                    return false;
+                }
+            }
+            else //Se não existir
+            {
+                p.numVacinas = 1;
+                p.dataVacina = DateTime.Today;
+                p.vacinado = false;
+                vacinados.Add(p);
+            }
+            return true; 
+        }
+
+        public List<PessoaG3> ProcuraVacinados()
+        {
+            List<PessoaG3> aux = new List<PessoaG3>();
+
+            foreach(PessoaG3 p in vacinados)
+            {
+                if (p.vacinado == true)
+                {
+                    aux.Add(p);
+                }
+            }
+            return aux;
+        }
+
+        /// <summary>
+        /// Grupo III 4) carrega dados de ficheiro
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public bool Load(string fileName)
+        {
+            if (File.Exists(fileName))
+            {
+                try
+                {
+                    Stream stream = File.Open(fileName, FileMode.Open);
+                    BinaryFormatter bin = new BinaryFormatter();
+                    vacinados = (List<PessoaG3>)bin.Deserialize(stream);
+                    stream.Close();
+                    return true;
+                }
+                catch (IOException e)
+                {
+                    throw e;
+                }
+                catch (Exception e)
+                {
+                    throw e;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Grava dados para ficheiro
+        /// </summary>
+        /// <param name="fileName"></param>
+        /// <returns></returns>
+        public bool Save(string fileName)
+        {
+            if (File.Exists(fileName))
+            {
+                try
+                {
+                    Stream stream = File.Open(fileName, FileMode.Create);
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, vacinados);
+                    stream.Close();
+                    return true;
+                }
+                catch (IOException e)
+                {
+                    throw e;
+                }
+            }
+            return false;
+        }
+
+    }
+
+
+    #endregion
 
     #endregion
 
